@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# next-app-router-as-ssg
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+> next build
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ▲ Next.js 15.1.6
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+ ✓ Linting and checking validity of types
+ ✓ Collecting page data
+ ✓ Generating static pages (9/9)
+ ✓ Collecting build traces
+ ✓ Exporting (3/3)
+ ✓ Finalizing page optimization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Route (app)                              Size     First Load JS
+┌ ○ /                                    142 B           106 kB
+├ ○ /_not-found                          979 B           106 kB
+├ ○ /about                               142 B           106 kB
+└ ● /posts/[path]                        142 B           106 kB
+    ├ /posts/hello
+    ├ /posts/world
+    └ /posts/export
++ First Load JS shared by all            105 kB
+  ├ chunks/4bd1b696-20882bf820444624.js  52.9 kB
+  ├ chunks/517-8339dfdf94467857.js       50.5 kB
+  └ other shared chunks (total)          1.88 kB
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+```
