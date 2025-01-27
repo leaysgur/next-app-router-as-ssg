@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
